@@ -1,6 +1,12 @@
 html,
 body {
-	margin: 0;
+	margin: 10px;
+}
+
+#screen {
+	font-size: 40px;
+	width: 422px;
+	margin-bottom: 10px;
 }
 
 #calcButtons {
