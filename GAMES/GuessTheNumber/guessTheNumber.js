@@ -1,7 +1,7 @@
 async function start() {
 	// your code goes here!
 	let num = random(1, 100);
-	num = Math.round(num);
+	num = round(num);
 	let guess = 0;
 
 	while (num != guess) {
