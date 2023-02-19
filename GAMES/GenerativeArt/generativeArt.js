@@ -67,7 +67,7 @@ function draw() {
 		}
 
 		point(eqX(time), eqY(time));
-
+		background(0, 0, 0, 10);
 		if (art == 1) {
 			//stroke(255, 100, 60);
 			point(eqX2(time), eqY2(time));
