@@ -1,14 +1,14 @@
 let time = 0;
-let art = 4;
+let art = 1;
 function setup() {}
 function eqX(t) {
-	if (art == 0) return cos(t * 5) * 500;
+	if (art == 0 || art == 5) return cos(t * 5) * 500;
 	if (art == 1) return sin(t * 2) * 400 + cos(t) * 200;
 	if (art == 2 || art == 4) return tan(t * 7) * 100 + sin(t) * 1000;
 	if (art == 3) return (1 / cos(t * 8)) * mouse.y;
 }
 function eqY(t) {
-	if (art == 0) return sin(t * 5) * 400;
+	if (art == 0 || art == 5) return sin(t * 5) * 400;
 	if (art == 1) return cos(t * 2) * 300 + cos(t) * 100;
 	if (art == 2) return tan(t * 7) * 100;
 	if (art == 3) return (1 / tan(t * 8)) * 100;
@@ -33,12 +33,21 @@ function eqY4(t) {
 	return sin(t * 5) * 100;
 }
 function draw() {
-	if (art == 2) background(0, 0, 0, 0);
-	else background(0, 0, 0, 10);
+	if (art == 2) {
+		background(0, 0, 0, 0);
+	} else if (art == 6) {
+		background(0, 0, 0, 100);
+	} else background(0, 0, 0, 10);
 	translate(width * 0.5, height * 0.5);
 
-	if (kb.presses('left')) art--;
-	if (kb.presses('right')) art++;
+	if (kb.presses('left')) {
+		background(0);
+		art--;
+	}
+	if (kb.presses('right')) {
+		background(0);
+		art++;
+	}
 
 	if (art == 2) {
 		translate((frameCount % 2000) - 1000, (frameCount % 2000) - 1000);
@@ -46,6 +55,7 @@ function draw() {
 
 	let loopLength = 50;
 	if (art == 2) loopLength = 200;
+	if (art == 5 || art == 6) loopLength = 10;
 
 	for (let i = 0; i < loopLength; i++) {
 		if (art == 1) {
@@ -61,13 +71,20 @@ function draw() {
 		} else if (art == 4) {
 			stroke(random(0, 255), random(0, 255), random(0, 255));
 			strokeWeight(random(3, 8));
+		} else if (art == 6) {
+			stroke(random(50, 200), random(10, 220), random(43, 123));
 		} else {
 			stroke(200);
 			strokeWeight(5);
 		}
 
-		point(eqX(time), eqY(time));
-		background(0, 0, 0, 10);
+		if (art == 5) {
+			line(eqX(time), eqY(time), eqX2(time), eqY2(time));
+		} else if (art == 6) {
+			line(eqX3(time), eqY3(time), eqX4(time), eqY4(time));
+		} else {
+			point(eqX(time), eqY(time));
+		}
 		if (art == 1) {
 			//stroke(255, 100, 60);
 			point(eqX2(time), eqY2(time));

@@ -25,9 +25,9 @@ let times = [];
 function background() {
 	for (let i = 1; i < 29; i++) {
 		if (i % 2 == 0) {
-			text('/' + '⎺⎺\\_/'.repeat(15), i);
+			txt('/' + '⎺⎺\\_/'.repeat(15), i);
 		} else {
-			text('\\' + '_/⎺⎺\\'.repeat(15), i);
+			txt('\\' + '_/⎺⎺\\'.repeat(15), i);
 		}
 	}
 }
@@ -86,7 +86,7 @@ function makeTargets() {
 }
 async function imposterClick() {
 	erase();
-	text(target, targetRow, targetCol);
+	txt(target, targetRow, targetCol);
 	await alert('GAME OVER', 12, 30, 29);
 	erase();
 	times = [];

@@ -77,8 +77,8 @@ function draw() {
 		lPlayerScore++;
 		ball.speed = Math.round(random(1, 4));
 	}
-	text(lPlayerScore, 2, 10);
-	text(rPlayerScore, 2, 22);
+	txt(lPlayerScore, 2, 10);
+	txt(rPlayerScore, 2, 22);
 	if (ball.collided(rightPaddle)) {
 		ball.speed += 0.3;
 	} else if (ball.collided(leftPaddle)) {
