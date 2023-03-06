@@ -1,0 +1,51 @@
+[
+	{
+		"id": "01",
+		"title": "Harry Potter and The Prisoner of Azkaban",
+		"genre": 0,
+		"rating": 100,
+		"description": "British movie"
+	},
+	{
+		"id": "02",
+		"title": "Titanic",
+		"genre": 1,
+		"rating": 150,
+		"description": "famous movie"
+	},
+	{
+		"id": "03",
+		"title": "Groundhog Day",
+		"genre": 2,
+		"rating": 50,
+		"description": "fun movie"
+	},
+	{
+		"id": "04",
+		"title": "The Shawshank Redemption",
+		"genre": 3,
+		"rating": 9.3,
+		"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+	},
+	{
+		"id": "05",
+		"title": "The Godfather",
+		"genre": 4,
+		"rating": 9.2,
+		"description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+	},
+	{
+		"id": "06",
+		"title": "The Dark Knight",
+		"genre": 4,
+		"rating": 9.0,
+		"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+	},
+	{
+		"id": "07",
+		"title": "Schindler's List",
+		"genre": 3,
+		"rating": 8.9,
+		"description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."
+	}
+]
