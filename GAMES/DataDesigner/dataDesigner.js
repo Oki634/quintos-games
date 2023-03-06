@@ -19,6 +19,15 @@ async function start() {
 }
 async function mainMenu() {
 	erase();
+	let table = header;
+	for (let film of allFilms) {
+		if (film.title.length >= 30) {
+			table = table + '| ' + film.id + ' | ' + film.title.slice(0, 28) + '... |\n';
+		} else {
+			table = table + '| ' + film.id + ' | ' + film.title.padEnd(32, ' ') + '|\n';
+		}
+	}
+	txt(table, 6, 0);
 	let cmd = await prompt('Main Menu\n0: View Member\n1: View Film Info\n2: Exit', 16, 0, 40);
 	if (cmd[0] == 0) {
 		for (let member of members) {
